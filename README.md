@@ -2,7 +2,7 @@
 
 Put your desktop on fire and overheat your computer, all at the same time!
 
-![demo](/assets/demo.mp4)
+https://github.com/user-attachments/assets/d6a745b2-11c3-4a3e-8666-4b2ab4058cf5
 
 ## Usage
 
