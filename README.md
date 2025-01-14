@@ -2,7 +2,7 @@
 
 Put your desktop on fire and overheat your computer, all at the same time!
 
-![demo](/assets/demo.mov)
+![demo](/assets/demo.mp4)
 
 ## Usage
 
