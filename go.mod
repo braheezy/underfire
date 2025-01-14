@@ -1,4 +1,4 @@
-module doomfire
+module underfire
 
 go 1.23.3
 
