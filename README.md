@@ -10,7 +10,7 @@ _Your CPU cycles are not important_
 
 I did it twice, choose one.
 
-The Zig is faster I think and produces a smaller binary.
+The Zig is faster I think and produces a smaller binary, probably cause it uses shared libraries.
 
 ### Go
 
