@@ -9,7 +9,7 @@ import (
 )
 
 var palette = []color.Color{
-	color.RGBA{0, 0, 0, 0},         // 0: Clear
+	color.RGBA{0, 0, 0, 255},       // 0: Clear
 	color.RGBA{7, 7, 7, 255},       // 1: Dark Gray
 	color.RGBA{31, 7, 7, 255},      // 2: Dark Red
 	color.RGBA{47, 15, 7, 255},     // 3: Red-Brown
@@ -139,11 +139,6 @@ func (g *Game) Draw(screen *ebiten.Image) {
 				pixelBuffer[idx+1] = c.G
 				pixelBuffer[idx+2] = c.B
 				pixelBuffer[idx+3] = c.A
-			} else {
-				pixelBuffer[idx] = 0
-				pixelBuffer[idx+1] = 0
-				pixelBuffer[idx+2] = 0
-				pixelBuffer[idx+3] = 0
 			}
 		}
 	}
@@ -161,13 +156,14 @@ func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
 func main() {
 	fullW, fullH := ebiten.Monitor().Size()
 
-	fireHeight := int(fullH / 8)
+	fireHeight := int(fullH / 12)
 
 	game := NewGame(fullW, fireHeight)
 	ebiten.SetWindowFloating(true)
 	ebiten.SetWindowSize(game.screenWidth, fireHeight)
 	ebiten.SetWindowPosition(0, fullH-fireHeight)
 	ebiten.SetWindowDecorated(false)
+	ebiten.SetTPS(60)
 
 	if err := ebiten.RunGameWithOptions(game, &ebiten.RunGameOptions{ScreenTransparent: true}); err != nil {
 		log.Fatal(err)
